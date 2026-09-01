@@ -6,58 +6,58 @@ import { usePricingCalculator } from "@/hooks/usePricingCalculator";
 import logo from "@/assets/advicelab-logo.webp";
 
 const navigation = [
-  { name: "Home", href: "/" },
-  {
-    name: "About",
-    href: "/about",
-    children: [
-      { name: "About Us", href: "/about-us" },
-      { name: "Giving Back", href: "/giving-back" },
-    ],
-  },
+  // { name: "Home", href: "/" },
+  // {
+  //   name: "About",
+  //   href: "/about",
+  //   children: [
+  //     { name: "About Us", href: "/about-us" },
+  //     { name: "Giving Back", href: "/giving-back" },
+  //   ],
+  // },
 
   {
     name: "Services",
     href: "/services",
     children: [
-      { name: "All Services", href: "/services" },
-      { name: "Paraplanning", href: "/services/paraplanning" },
-      { name: "Client Support Officers", href: "/services/clientsupport" },
-      { name: "SMSF & Accounting", href: "/services/smsf-accounting" },
-      { name: "Mortgage Support", href: "/services/mortgage-support" },
+      // { name: "All Services", href: "/services" },
+      // { name: "Paraplanning", href: "/services/paraplanning" },
+      // { name: "Client Support Officers", href: "/services/clientsupport" },
+      // { name: "SMSF & Accounting", href: "/services/smsf-accounting" },
+      // { name: "Mortgage Support", href: "/services/mortgage-support" },
       { name: "Digital Marketing", href: "/services/marketing" },
     ],
   },
   {
-    name: "Resources",
-    href: "/resources/blogs",
-    children: [
-      // {
-      //   name: "Adviser's Guide for Outsourcing",
-      //   href: "/resources#advisers-guide-for-outsourcing",
-      // },
-      // { name: "Pricing Calculator", href: "/resources#pricing-calculator" },
-      // {
-      //   name: "Accountant's Offshoring Playbook",
-      //   href: "/resources#accountants-offshoring-playbook",
-      // },
-      // {
-      //   name: "Virtual CSO Task Library",
-      //   href: "/resources#virtual-cso-task-library",
-      // },
-      // {
-      //   name: "SMSF Trustee Education Kit",
-      //   href: "/resources#smsf-trustee-education-kit",
-      // },
-      { name: "Blog", href: "/resources/blogs" },
-      {
-        name: "Paraplanning Fee Calculator",
-        href: "/resources/pricing-calculator",
-      },
-    ],
+    // name: "Resources",
+    // href: "/resources/blogs",
+    // children: [
+    // {
+    //   name: "Adviser's Guide for Outsourcing",
+    //   href: "/resources#advisers-guide-for-outsourcing",
+    // },
+    // { name: "Pricing Calculator", href: "/resources#pricing-calculator" },
+    // {
+    //   name: "Accountant's Offshoring Playbook",
+    //   href: "/resources#accountants-offshoring-playbook",
+    // },
+    // {
+    //   name: "Virtual CSO Task Library",
+    //   href: "/resources#virtual-cso-task-library",
+    // },
+    // {
+    //   name: "SMSF Trustee Education Kit",
+    //   href: "/resources#smsf-trustee-education-kit",
+    // },
+    // { name: "Blog", href: "/resources/blogs" },
+    // {
+    //   name: "Paraplanning Fee Calculator",
+    //   href: "/resources/pricing-calculator",
+    // },
+    // ],
   },
-  { name: "Careers", href: "/careers" },
-  { name: "Contact Us", href: "/contact-us" },
+  // { name: "Careers", href: "/careers" },
+  // { name: "Contact Us", href: "/contact-us" },
 ];
 
 export function Navbar() {
@@ -111,8 +111,8 @@ export function Navbar() {
               >
                 <button
                   className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${isActive(item.href)
-                      ? "text-primary"
-                      : "text-muted-foreground"
+                    ? "text-primary"
+                    : "text-muted-foreground"
                     }`}
                 >
                   {item.name}
@@ -127,8 +127,8 @@ export function Navbar() {
                             key={child.name}
                             onClick={openPricingCalculator}
                             className={`block w-full text-left px-4 py-3 text-sm leading-[0.9rem] hover:bg-secondary rounded-xl transition-colors ${isActive(child.href, item.name)
-                                ? "text-primary font-semibold"
-                                : "text-muted-foreground hover:text-primary"
+                              ? "text-primary font-semibold"
+                              : "text-muted-foreground hover:text-primary"
                               }`}
                           >
                             {child.name}
@@ -138,8 +138,8 @@ export function Navbar() {
                             key={child.name}
                             to={child.href}
                             className={`block px-4 py-3 text-sm leading-[0.9rem] hover:bg-secondary rounded-xl transition-colors ${isActive(child.href, item.name)
-                                ? "text-primary font-semibold"
-                                : "text-muted-foreground hover:text-primary"
+                              ? "text-primary font-semibold"
+                              : "text-muted-foreground hover:text-primary"
                               }`}
                           >
                             {child.name}
@@ -188,8 +188,8 @@ export function Navbar() {
       {/* Mobile Menu Start */}
       <div
         className={`lg:hidden fixed top-[76px] left-0 right-0 bg-background border-t border-border transition-transform duration-300 ease-in-out ${mobileMenuOpen
-            ? "translate-y-0 opacity-100"
-            : "-translate-y-full opacity-0 pointer-events-none"
+          ? "translate-y-0 opacity-100"
+          : "-translate-y-full opacity-0 pointer-events-none"
           }`}
       >
         <div className="container mx-auto py-4 px-4 space-y-2">
@@ -198,8 +198,8 @@ export function Navbar() {
               {item.children ? (
                 <button
                   className={`flex items-center justify-between w-full py-3 text-base font-medium ${isActive(item.href)
-                      ? "text-primary"
-                      : "text-muted-foreground"
+                    ? "text-primary"
+                    : "text-muted-foreground"
                     }`}
                   onClick={() =>
                     setMobileDropdownOpen(
@@ -217,8 +217,8 @@ export function Navbar() {
                 <Link
                   to={item.href}
                   className={`block py-3 text-base font-medium ${isActive(item.href)
-                      ? "text-primary"
-                      : "text-muted-foreground"
+                    ? "text-primary"
+                    : "text-muted-foreground"
                     }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -236,8 +236,8 @@ export function Navbar() {
                           openPricingCalculator();
                         }}
                         className={`block w-full text-left py-2 text-sm leading-[0.9rem] transition-colors ${isActive(child.href, item.name)
-                            ? "text-primary font-semibold"
-                            : "text-muted-foreground hover:text-primary"
+                          ? "text-primary font-semibold"
+                          : "text-muted-foreground hover:text-primary"
                           }`}
                       >
                         {child.name}
@@ -247,8 +247,8 @@ export function Navbar() {
                         key={child.name}
                         to={child.href}
                         className={`block py-2 text-sm leading-[0.9rem] transition-colors ${isActive(child.href, item.name)
-                            ? "text-primary font-semibold"
-                            : "text-muted-foreground hover:text-primary"
+                          ? "text-primary font-semibold"
+                          : "text-muted-foreground hover:text-primary"
                           }`}
                         onClick={() => setMobileMenuOpen(false)}
                       >

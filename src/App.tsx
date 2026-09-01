@@ -67,16 +67,16 @@ const AppRoutes = () => {
       <ScrollToTop />
       <Suspense fallback={<PageLoader />}>
         <Routes>
-          <Route path="/" element={<Index />} />
+          {/* <Route path="/" element={<Index />} />
           <Route path="/about" element={<Navigate to="/about-us" replace />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/paraplanning" element={<Paraplanning />} />
           <Route path="/services/clientsupport" element={<ClientSupport />} />
           <Route path="/services/mortgage-support" element={<Mortgage />} />
-          <Route path="/services/smsf-accounting" element={<SMSFAccounting />} />
+          <Route path="/services/smsf-accounting" element={<SMSFAccounting />} /> */}
           <Route path="/services/marketing" element={<Marketing />} />
-          <Route
+          {/* <Route
             path="/services/paraplanning-pricing" //? Marketing calculator page
             element={<PricingCalculatorCTAForMarketing />}
           />
@@ -91,18 +91,18 @@ const AppRoutes = () => {
           <Route path="/resources/blogs" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/careers" element={<Careers />} />
-          <Route path="/giving-back" element={<Foundation />} />
+          <Route path="/giving-back" element={<Foundation />} /> */}
           {/* <Route path="/careers/philippines" element={<PhilippinesVacancies />} />
           <Route path="/careers/srilanka" element={<SriLankaVacancies />} />
           // <Route path="/careers/job/:jobId" element={<JobDetail />} /> */}
-          <Route path="/careers/submit-resume" element={<SubmitResume />} />
+          {/* <Route path="/careers/submit-resume" element={<SubmitResume />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/cookies-policy" element={<CookiesPolicy />} />
           <Route
             path="/information-security-statement"
             element={<InformationSecurityStatement />}
           />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </Suspense>
     </>
