@@ -25,7 +25,7 @@ const navigation = [
       { name: "Client Support Officers", href: "/services/clientsupport" },
       { name: "SMSF & Accounting", href: "/services/smsf-accounting" },
       { name: "Mortgage Support", href: "/services/mortgage-support" },
-      // { name: "Digital Marketing", href: "/services/marketing" },
+      { name: "Digital Marketing", href: "/services/marketing" },
     ],
   },
   {
@@ -110,11 +110,10 @@ export function Navbar() {
                 onMouseLeave={() => setOpenDropdown(null)}
               >
                 <button
-                  className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${
-                    isActive(item.href)
+                  className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${isActive(item.href)
                       ? "text-primary"
                       : "text-muted-foreground"
-                  }`}
+                    }`}
                 >
                   {item.name}
                   <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
@@ -127,11 +126,10 @@ export function Navbar() {
                           <button
                             key={child.name}
                             onClick={openPricingCalculator}
-                            className={`block w-full text-left px-4 py-3 text-sm leading-[0.9rem] hover:bg-secondary rounded-xl transition-colors ${
-                              isActive(child.href, item.name)
+                            className={`block w-full text-left px-4 py-3 text-sm leading-[0.9rem] hover:bg-secondary rounded-xl transition-colors ${isActive(child.href, item.name)
                                 ? "text-primary font-semibold"
                                 : "text-muted-foreground hover:text-primary"
-                            }`}
+                              }`}
                           >
                             {child.name}
                           </button>
@@ -139,11 +137,10 @@ export function Navbar() {
                           <Link
                             key={child.name}
                             to={child.href}
-                            className={`block px-4 py-3 text-sm leading-[0.9rem] hover:bg-secondary rounded-xl transition-colors ${
-                              isActive(child.href, item.name)
+                            className={`block px-4 py-3 text-sm leading-[0.9rem] hover:bg-secondary rounded-xl transition-colors ${isActive(child.href, item.name)
                                 ? "text-primary font-semibold"
                                 : "text-muted-foreground hover:text-primary"
-                            }`}
+                              }`}
                           >
                             {child.name}
                           </Link>
@@ -157,9 +154,8 @@ export function Navbar() {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-primary ${isActive(item.href) ? "text-primary" : "text-muted-foreground"
+                  }`}
               >
                 {item.name}
               </Link>
@@ -191,22 +187,20 @@ export function Navbar() {
 
       {/* Mobile Menu Start */}
       <div
-        className={`lg:hidden fixed top-[76px] left-0 right-0 bg-background border-t border-border transition-transform duration-300 ease-in-out ${
-          mobileMenuOpen
+        className={`lg:hidden fixed top-[76px] left-0 right-0 bg-background border-t border-border transition-transform duration-300 ease-in-out ${mobileMenuOpen
             ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0 pointer-events-none"
-        }`}
+          }`}
       >
         <div className="container mx-auto py-4 px-4 space-y-2">
           {navigation.map((item) => (
             <div key={item.name}>
               {item.children ? (
                 <button
-                  className={`flex items-center justify-between w-full py-3 text-base font-medium ${
-                    isActive(item.href)
+                  className={`flex items-center justify-between w-full py-3 text-base font-medium ${isActive(item.href)
                       ? "text-primary"
                       : "text-muted-foreground"
-                  }`}
+                    }`}
                   onClick={() =>
                     setMobileDropdownOpen(
                       mobileDropdownOpen === item.name ? null : item.name,
@@ -215,19 +209,17 @@ export function Navbar() {
                 >
                   {item.name}
                   <ChevronDown
-                    className={`w-4 h-4 transition-transform ${
-                      mobileDropdownOpen === item.name ? "rotate-180" : ""
-                    }`}
+                    className={`w-4 h-4 transition-transform ${mobileDropdownOpen === item.name ? "rotate-180" : ""
+                      }`}
                   />
                 </button>
               ) : (
                 <Link
                   to={item.href}
-                  className={`block py-3 text-base font-medium ${
-                    isActive(item.href)
+                  className={`block py-3 text-base font-medium ${isActive(item.href)
                       ? "text-primary"
                       : "text-muted-foreground"
-                  }`}
+                    }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -243,11 +235,10 @@ export function Navbar() {
                           setMobileMenuOpen(false);
                           openPricingCalculator();
                         }}
-                        className={`block w-full text-left py-2 text-sm leading-[0.9rem] transition-colors ${
-                          isActive(child.href, item.name)
+                        className={`block w-full text-left py-2 text-sm leading-[0.9rem] transition-colors ${isActive(child.href, item.name)
                             ? "text-primary font-semibold"
                             : "text-muted-foreground hover:text-primary"
-                        }`}
+                          }`}
                       >
                         {child.name}
                       </button>
@@ -255,11 +246,10 @@ export function Navbar() {
                       <Link
                         key={child.name}
                         to={child.href}
-                        className={`block py-2 text-sm leading-[0.9rem] transition-colors ${
-                          isActive(child.href, item.name)
+                        className={`block py-2 text-sm leading-[0.9rem] transition-colors ${isActive(child.href, item.name)
                             ? "text-primary font-semibold"
                             : "text-muted-foreground hover:text-primary"
-                        }`}
+                          }`}
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {child.name}
