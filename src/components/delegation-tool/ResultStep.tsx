@@ -139,12 +139,12 @@ function LocalHireOption({ audit }: { audit: DelegationAuditResult }) {
                 <dd className="text-right font-semibold tabular-nums">
                   {aud.format(localHire.loadedSalary)}
                 </dd>
-                <dt className="text-muted-foreground">
+                {/* <dt className="text-muted-foreground">
                   For {roleResult.resourceLabel}
                 </dt>
                 <dd className="text-right font-bold tabular-nums text-foreground">
                   {aud.format(localHire.annualCost)}
-                </dd>
+                </dd> */}
               </dl>
             )}
           </div>
