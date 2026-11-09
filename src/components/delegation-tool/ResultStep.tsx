@@ -139,6 +139,8 @@ function LocalHireOption({ audit }: { audit: DelegationAuditResult }) {
                 <dd className="text-right font-semibold tabular-nums">
                   {aud.format(localHire.loadedSalary)}
                 </dd>
+
+                {/* unwanted code commented */}
                 {/* <dt className="text-muted-foreground">
                   For {roleResult.resourceLabel}
                 </dt>
