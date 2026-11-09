@@ -10,6 +10,7 @@ import { CookieConsent } from "@/components/CookieConsent";
 import { PricingCalculatorProvider } from "@/hooks/usePricingCalculator";
 import { PricingCalculatorPopupWrapper } from "@/components/ui/PricingCalculatorPopupWrapper";
 import PageLoader from "./components/ui/PageLoader";
+import DelegationTool from "./pages/delegation-tool/DelegationTool";
 
 const Index = lazy(() => import("./pages/Index"));
 const About = lazy(() => import("./pages/About"));
@@ -76,6 +77,12 @@ const AppRoutes = () => {
           <Route path="/services/mortgage-support" element={<Mortgage />} />
           <Route path="/services/smsf-accounting" element={<SMSFAccounting />} /> */}
           <Route path="/services/marketing" element={<Marketing />} />
+
+          <Route
+            path="/resources/delegation-tool"
+            element={<DelegationTool />}
+          />
+
           {/* <Route
             path="/services/paraplanning-pricing" //? Marketing calculator page
             element={<PricingCalculatorCTAForMarketing />}
