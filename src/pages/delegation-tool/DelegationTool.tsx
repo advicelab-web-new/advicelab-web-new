@@ -89,11 +89,9 @@ export default function DelegationTool() {
                 How many hours a week could you hand off?
               </h1>
               <p className="text-xl text-primary-foreground/80 mb-8 text-center">
-                Work through {TASK_COUNT} everyday tasks in three short steps.
-                See your paraplanning and client support hours separately, and
-                the resource each one needs.
+                Work through {TASK_COUNT} everyday tasks. See your paraplanning and client support hours separately, and how to get your hours back or enhance your team.
               </p>
-              <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-primary-foreground/90">
+              {/* <ul className="flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm text-primary-foreground/90">
                 {[
                   { Icon: Clock, text: "About 5 minutes" },
                   { Icon: ShieldCheck, text: "No sign-up to see your result" },
@@ -104,7 +102,7 @@ export default function DelegationTool() {
                     {text}
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </ScrollAnimation>
           </div>
         </section>
