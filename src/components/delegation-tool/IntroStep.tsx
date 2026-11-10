@@ -82,9 +82,9 @@ export function IntroStep({ onStart }: { onStart: () => void }) {
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
-        <span className="text-sm text-muted-foreground">
+        {/* <span className="text-sm text-muted-foreground">
           {TASK_COUNT} tasks · about 5 minutes · no sign-up
-        </span>
+        </span> */}
         <Button onClick={onStart} size="lg">
           Start the audit
           <ArrowRight className="ml-1 h-4 w-4" />
